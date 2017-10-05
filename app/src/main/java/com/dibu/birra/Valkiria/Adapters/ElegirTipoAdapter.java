@@ -1,13 +1,14 @@
-package com.dibu.birra.Valkiria.Adapters;
+package com.valkiria.cerveza.Adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.dibu.birra.Valkiria.Modelo.Cerveza;
-import com.dibu.birra.myapplication.R;
+import com.valkiria.cerveza.Model.Cerveza;
+import com.valkiria.cerveza.R;
 
 import java.util.List;
 
@@ -49,16 +50,19 @@ public class ElegirTipoAdapter extends RecyclerView.Adapter<ElegirTipoAdapter.Vi
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView name;
         public TextView id;
+        public ImageView foto;
 
         public ViewHolder(View view){
             super(view);
             this.name = (TextView) view.findViewById(R.id.cerveza_name );
             this.id = (TextView) view.findViewById(R.id.cerveza_id);
+            this.foto = (ImageView) view.findViewById(R.id.imageViewCerveza);
         }
 
         public void bind(final Cerveza birra, final OnItemClickListener listener ){
             this.name.setText( "** " + birra.getDescrip() + " **");
             this.id.setText( " - " + Integer.toString(birra.getId()) );
+            this.foto.setImageResource( birra.getFoto() );
 
             //itemView heredada de   RecyclerView.ViewHolder
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +76,6 @@ public class ElegirTipoAdapter extends RecyclerView.Adapter<ElegirTipoAdapter.Vi
 
 
     public interface OnItemClickListener {
-        void onItemClick(Cerveza birra , int position);
+        void onItemClick(Cerveza birra, int position);
     }
 }
