@@ -1,15 +1,15 @@
-package com.dibu.birra.Valkiria.Activities;
+package com.valkiria.cerveza.Activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
-import com.dibu.birra.Valkiria.Adapters.ElegirTipoAdapter;
-import com.dibu.birra.Valkiria.Modelo.Cerveza;
-import com.dibu.birra.Valkiria.Modelo.Recetario;
-import com.dibu.birra.myapplication.R;
+import com.valkiria.cerveza.Adapters.ElegirTipoAdapter;
+import com.valkiria.cerveza.Model.Cerveza;
+import com.valkiria.cerveza.Model.Recetario;
+import com.valkiria.cerveza.R;
 
 import java.util.List;
 
